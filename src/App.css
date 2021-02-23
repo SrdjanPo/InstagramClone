@@ -1,38 +1,126 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+#form-title {
+  margin-bottom: 60px;
+  width: 100%;
   text-align: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: rgb(72, 197, 255);
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.login {
+  width: 100%;
   min-height: 100vh;
+  padding: 0 0px;
+  background: #f8f8f8;
+  display: flex;
+}
+
+.login .loginContainer {
+  padding: 0 60px 0 60px;
+  margin: auto;
+  width: 100%;
+  max-width: 450px;
+  min-height: 500px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: rgb(255, 255, 255);
+  border-color: rgb(212, 212, 212);
+  border-style: solid;
+  border-width: 0.1px;
 }
 
-.App-link {
-  color: #61dafb;
+.login .loginContainer label {
+  color: rgb(70, 70, 70);
+  margin: 14px 0;
+  display: block;
+  font-size: 22px;
+  line-height: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login .loginContainer input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  padding: 10px;
+  background: rgba(90, 90, 90, 0.1);
+  color: rgb(27, 27, 27);
+  letter-spacing: 1px;
+}
+
+.login .loginContainer .btnContainer {
+  width: 100%;
+  padding: 24px 0;
+}
+
+.login .loginContainer .btnContainer p {
+  margin: 14px 0 0 0;
+  text-align: right;
+  color: rgb(77, 77, 77);
+}
+
+.login .loginContainer .btnContainer p span {
+  color: rgb(72, 197, 255);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: all 400ms ease-in-out;
+}
+
+.login .loginContainer .btnContainer p span:hover {
+  color: rgb(72, 197, 255);
+}
+
+.login .loginContainer .errorMsg {
+  color: rrgb(72, 197, 255);
+  font-size: 16px;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(
+    ellipse at left bottom,
+    rgba(22, 24, 47, 1) 0%,
+    rgba(38, 20, 72, 0.9) 59%,
+    rgba(17, 27, 75, 0.9) 100%
+  );
+}
+
+.hero nav {
+  background: #603bbb;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero nav h2 {
+  color: #fff;
+}
+
+.hero nav button {
+  width: 86px;
+  padding: 8px 0;
+  background: #3a2b58;
 }
