@@ -45,6 +45,11 @@ button {
   padding-top: 100px;
 }
 
+.vl {
+  border-left: 1px solid rgb(65, 65, 65);
+  height: 35px;
+}
+
 .loginContainer {
   padding: 0 40px 0 40px;
   margin: auto;
@@ -125,10 +130,10 @@ button {
 .hero nav {
   background: #ffffff;
   width: 100%;
-  padding: 20px 40px;
+  padding: 10px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .hero nav h2 {
@@ -139,4 +144,27 @@ button {
   width: 86px;
   padding: 8px 0;
   background: #3a2b58;
+}
+
+#nav-logo {
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 10px;
+}
+
+#nav-logo-text {
+  max-width: 100px;
+  max-height: 50px;
+  margin-left: 10px;
+}
+
+#searchInput {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.nav-icons {
+  max-width: 35px;
+  max-height: 35px;
+  margin-left: 10px;
 }
