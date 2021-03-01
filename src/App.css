@@ -137,13 +137,13 @@ button {
 }
 
 .hero nav h2 {
-  color: rgb(51, 51, 51);
+  color: rgb(0, 0, 0);
 }
 
 .hero nav button {
   width: 86px;
-  padding: 8px 0;
-  background: #3a2b58;
+  background: #ffffff;
+  color: black;
 }
 
 #nav-logo {

@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+.basic-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+#profile_pic_img,
+#user_name {
+  margin-top: 5%;
+  margin-left: 26%;
+  flex: 1;
+}
+
+#profile_pic_img {
+  max-width: 150px;
+  border-radius: 50%;
+}

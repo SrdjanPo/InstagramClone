@@ -5,6 +5,10 @@ const Login = (props) => {
     setEmail,
     password,
     setPassword,
+    username,
+    setUsername,
+    fullName,
+    setFullName,
     handleLogin,
     handleSignup,
     hasAccount,
@@ -58,8 +62,8 @@ const Login = (props) => {
               type="text"
               placeholder="Full Name"
               required
-              //   value={email}
-              //   onChange={(e) => setEmail(e.target.value)}
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
             ></input>
             <p className="errorMsg">{emailError}</p>
             <br></br>
@@ -67,8 +71,8 @@ const Login = (props) => {
               type="text"
               placeholder="Username"
               required
-              //   value={email}
-              //   onChange={(e) => setEmail(e.target.value)}
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             ></input>
             <p className="errorMsg">{emailError}</p>
             <br></br>

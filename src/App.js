@@ -7,7 +7,9 @@ import "./App.css";
 function App() {
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [fullName, setFullName] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [hasAccount, setHasAccount] = useState(false);
@@ -15,6 +17,8 @@ function App() {
   const clearInputs = () => {
     setEmail("");
     setPassword("");
+    setUsername("");
+    setFullName("");
   };
 
   const clearErrors = () => {
@@ -46,6 +50,22 @@ function App() {
     fire
       .auth()
       .createUserWithEmailAndPassword(email, password)
+      .then(function (user) {
+        var user = fire.auth().currentUser;
+        fire.database().ref("Users").child(user.uid).child("email").set(email);
+        fire
+          .database()
+          .ref("Users")
+          .child(user.uid)
+          .child("full name")
+          .set(fullName);
+        fire
+          .database()
+          .ref("Users")
+          .child(user.uid)
+          .child("username")
+          .set(username);
+      })
       .catch((err) => {
         switch (err.code) {
           case "auth/email-already-in-use":
@@ -88,6 +108,10 @@ function App() {
           setEmail={setEmail}
           password={password}
           setPassword={setPassword}
+          username={username}
+          setUsername={setUsername}
+          fullName={fullName}
+          setFullName={setFullName}
           handleLogin={handleLogin}
           handleSignup={handleSignup}
           hasAccount={hasAccount}
